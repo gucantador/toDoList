@@ -3,7 +3,11 @@ import { useFonts, Inter_400Regular, Inter_800ExtraBold } from '@expo-google-fon
 
 import { styles } from './styles'
 
+import { Task } from './../../components/Task';
+
 export default function Home() {
+
+    let taskArray: string[] = [];
 
     const [fontsLoaded] = useFonts({
         Inter_400Regular,
@@ -26,14 +30,20 @@ export default function Home() {
         <View style={styles.containerBottom}>
           <View style={styles.tasksMeasures}>
             <View style={styles.created}>
-              <Text style={styles.textCreated}>Criadas</Text>
-              <Text style={styles.howManyCreated}>0</Text>
+              <Text style={[styles.textCreated, { fontFamily: 'Inter_800ExtraBold' }]}>Criadas</Text>
+              <View style={styles.numberContainer}>
+                <Text style={[styles.howManyCreated,  { fontFamily: 'Inter_800ExtraBold' }]}>0</Text>
+              </View>
             </View>
             <View style={styles.concluded}>
-              <Text style={styles.textConcluded}>Concluded</Text>
-              <Text style={styles.howManyConclude}>0</Text>
+              <Text style={[styles.textConcluded, { fontFamily: 'Inter_800ExtraBold' }]}>Concluídas</Text>
+              <View style={styles.numberContainer}>
+                <Text style={[styles.howManyConclude, { fontFamily: 'Inter_800ExtraBold' }]}>0</Text>
+              </View>
             </View>
+          
           </View>
+         <Task taskList={taskArray}></Task>
         </View>
         <View style={styles.form}>
             <TextInput

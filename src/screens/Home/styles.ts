@@ -77,16 +77,14 @@ export const styles = StyleSheet.create({
             
         },
         tasksMeasures:{
-            flex: 1,
+            
             flexDirection: 'row',
             marginTop: "13%",
-            width: "50%",
-            backgroundColor: "#fff"
+            justifyContent: 'space-between'
             
         },
         created: {
             flexDirection: 'row',
-            marginRight: '50%',
             marginLeft: "5%"
         },
         textCreated: {
@@ -94,18 +92,26 @@ export const styles = StyleSheet.create({
             marginRight: 7
         },
         howManyCreated: {
-            color: "#fff"
+            color: "#fff",
         },
         concluded: {
-            flexDirection: 'row'
+            flexDirection: 'row',
+            marginRight: '5%'
         },
         textConcluded: {
             color: "#5E60CE",
             marginRight: 7
         },
         howManyConclude: {
-            color: "#fff"
+            color: "#fff",
+            
         },
+        numberContainer: {
+            backgroundColor: '#6d6d6d', 
+            padding: 3, 
+            borderRadius: 20,
+            alignItems: "center"
+            },
 
         
     });
