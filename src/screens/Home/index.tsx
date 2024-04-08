@@ -7,7 +7,11 @@ import { Task } from './../../components/Task';
 
 export default function Home() {
 
-    let taskArray: string[] = [];
+    let taskArray: string[] = ['s'];
+
+    const removeTask = () => {
+      console.log("Task removed");
+    }
 
     const [fontsLoaded] = useFonts({
         Inter_400Regular,
@@ -43,7 +47,7 @@ export default function Home() {
             </View>
           
           </View>
-         <Task taskList={taskArray}></Task>
+         <Task taskList={taskArray} onRemoveTask={removeTask}></Task>
         </View>
         <View style={styles.form}>
             <TextInput

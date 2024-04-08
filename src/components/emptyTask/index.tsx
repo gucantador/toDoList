@@ -1,6 +1,8 @@
 import { View, Image, Text } from 'react-native';
 import { styles } from './styles';
 
+
+
 export function EmptyTask () {
 
     return (
