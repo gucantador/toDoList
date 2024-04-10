@@ -6,28 +6,14 @@ import { EmptyTask } from '../emptyTask';
 import { CreatedTask } from '../createdTask';
 
 type Props = {
-    taskList: string[];
     onRemoveTask: () => void;
+    taskContent: string;
+    onConcludeTask: () => void;
 }
 
-export function Task({ taskList, onRemoveTask }: Props) {
-
-    const [isTask, setIsTask] = useState(false);
-
-    useEffect(() => {
-        isEmpty();
-    }, [taskList]);
-
-    const isEmpty = () => {
-        if (taskList.length === 0 || taskList === undefined) {
-            setIsTask(true);
-        } else {
-            setIsTask(false);
-        }
-    }
-    
+export function Task({ onRemoveTask, taskContent, onConcludeTask }: Props) {
 
     return (
-        isTask ? <EmptyTask></EmptyTask>  :  <CreatedTask onRemove={onRemoveTask} taskContent={}></CreatedTask>
+        <CreatedTask onRemove={onRemoveTask} taskContent={taskContent} onConcludeTask={onConcludeTask}></CreatedTask>
     )
 }

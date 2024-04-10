@@ -72,7 +72,6 @@ export const styles = StyleSheet.create({
             flex: 1,
             backgroundColor: "#1F1E25", 
             width: '100%', // Ocupa toda a largura do contêiner principal
-            height: "100%",
             position: 'relative',
             
         },
@@ -112,6 +111,9 @@ export const styles = StyleSheet.create({
             borderRadius: 20,
             alignItems: "center"
             },
+        productivityText: {
+            color: "#fff"
+        }
 
         
     });
